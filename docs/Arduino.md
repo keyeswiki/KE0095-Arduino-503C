@@ -1,41 +1,6 @@
-Arduino电子爱好者通用元件包套件503C
+# 3、Arduino
 
-![](media/cd2cc3c7e331656e9140a9153409a2d2.jpg)
-
-
-# 1、说明
-
-这个套件包含我们玩单片机时使用到的最基本的元件，如按键、LED、电位器等。它适用于各种单片机和树莓派。我们还会根据这些元件，提供一些基于Arduino开发板的一些学习课程，如LED闪烁实验、LCD显示实验等，让你对这些电子元件和Arduino开发板有个初步的了解。
-
-# 2、清单
-
-
-|编码|名称|描述|数量|图片|
-|-|-|-|-|-|
-|1|LED|F5-红发红-短|5|![](media/557767e2afcda28f66f20f124e174c44.png)|
-|2|LED|F5-黄发黄-短|5|![](media/bb42585eb8c072b22afe5478fe076f27.png)|
-|3|LED|F5-蓝发蓝-短|5|![](media/797f69509d22d4250f7bb62f885813bf.png)|
-|4|电阻|碳膜色环 1/4W 1% 100R 编带|30|![](media/f6a8649da4e79abb2f1d15479f073bb5.jpg)×30|
-|5|电阻|碳膜色环 1/4W 5% 1K 编带|30|![](media/f6a8649da4e79abb2f1d15479f073bb5.jpg)×30|
-|6|电阻|碳膜色环 1/4W 5% 4.7K 编带|30|![](media/f6a8649da4e79abb2f1d15479f073bb5.jpg)×30|
-|7|电阻|碳膜色环 1/4W 5% 10K 编带|30|![](media/f6a8649da4e79abb2f1d15479f073bb5.jpg)×30|
-|8|电阻|碳膜色环 1/4W 5% 100K 编带|30|![](media/f6a8649da4e79abb2f1d15479f073bb5.jpg)×30|
-|9|电阻|碳膜色环 1/4W 1% 47K 编带|30|![](media/f6a8649da4e79abb2f1d15479f073bb5.jpg)×30|
-|10|电阻|碳膜色环 1/4W 5% 1M 编带|30|![](media/f6a8649da4e79abb2f1d15479f073bb5.jpg)×30|
-|11|可调电位器|3386MU 103（三针直排）|2|![](media/6d6025bc96667b6f44070355f2041f13.jpg)![](media/6d6025bc96667b6f44070355f2041f13.jpg)|
-|12|按键帽|A24 红帽(12*12*7.3)圆|2|![](media/f4522a2209f122d0b094cb5e4755b211.jpg)![](media/f4522a2209f122d0b094cb5e4755b211.jpg)![](media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg)![](media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg)|
-|13|按键帽|A24 蓝帽(12*12*7.3)圆|2|![](media/f4522a2209f122d0b094cb5e4755b211.jpg)![](media/f4522a2209f122d0b094cb5e4755b211.jpg)![](media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg)![](media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg)|
-|14|轻触按键|12*12*7.3MM 插件|4|![](media/f4522a2209f122d0b094cb5e4755b211.jpg)![](media/f4522a2209f122d0b094cb5e4755b211.jpg)![](media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg)![](media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg)|
-|15|蜂鸣器|有源 12*9.5MM 5V 普通分体 2300Hz|1|![](media/5a749ec6435e3982bf4dbdc5eaf7b51e.jpg)|
-|16|蜂鸣器|无源 12*8.5MM 5V 普通分体 2K|1|![](media/0c80123578173c033dcc8f1b73b1a58b.jpg)|
-|17|LCD|1602 COB 5V 蓝屏（一个电阻）|1|![](media/dfd939416f3d37aab7cdfb9dd20d39a1.png)|
-|18|排针|1*40直针 黑色 2.54|1|![](media/9a4ce90626c96645a87b3c7b1a82a8a6.png)|
-|19|面包板|ZY-60 400孔白色（纸卡包装）|1|![](media/5b59c759d98d3d24894a09e0ac878717.png)|
-|20|面包线|面包板连接线30根|1|![](media/aa5f4d54d5b8ec553906f3890bc2df0c.png)|
-|21|元件盒|绿色 2# 绿 75×31.5×21.5 16克|1|![](media/14e3865259225cc6ece92bd01c0518ba.png)|
-
-
-# 3、Arduino IDE和驱动的安装
+# 3.1、Arduino IDE和驱动的安装
 
 当我们拿到开发板时，首先我们要安装Arduino IDE和驱动，相关文件我们可以在官网上找到，以下链接是包含各种系统、各种版本的Arduino IDE和驱动任你选择。
 
@@ -98,7 +63,7 @@ Arduino电子爱好者通用元件包套件503C
 
 ![](media/af9806622ecf816c62f7597448a3cc5f.png)
 
-# 4、Arduino IDE的使用方法
+# 3.2、Arduino IDE的使用方法
 
 Keyes UNO R3
 开发板的USB驱动安装成功之后，我们可以在Windows设备管理器中找到相应的串口。
@@ -169,7 +134,7 @@ Serial.println("Hello World!");
 
 那么恭喜你，你的第一个程序已经成功了！！！
 
-# 5、实验课程
+# 3.3、实验课程
 
 ## 实验一 LED 闪烁实验
 
@@ -1300,14 +1265,6 @@ delay(5000);
 
 无论是四位接法还是八位接法，接好线，烧录程序上电后，通过旋转电位器调节背光，即可在1602 LCD上看到设置的显示字符。四位接法和八位接法显示一样，第一行显示
 "Hello, world!"字符，第二行显示"Hello, keyes!"字符。
-
-# 6、相关资料链接
-
-<https://pan.baidu.com/s/1On8wjRWip6cw0udCeQIWGA>
-
-提取码：5qh1
-
-
 
 
 
