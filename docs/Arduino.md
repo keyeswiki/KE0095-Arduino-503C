@@ -30,14 +30,11 @@
 
 ![](media/4baf5095962e49c1f3ebeb6c2da823f0.png)
 
-接下来是开发板驱动的安装，这次我们安装的是Keyes UNO R3
-开发板的驱动，Keyes 2560 R3
-开发板安装驱动方法和这个类似，驱动文件可以用同一个文件。
+接下来是开发板驱动的安装，这次我们安装的是Keyes UNO R3开发板的驱动，Keyes 2560 R3开发板安装驱动方法和这个类似，驱动文件可以用同一个文件。
 
 不同的系统，安装驱动的方法也有一些细小的区别，下面我们介绍在WIN 7系统安装驱动的方法。
 
-第一次Keyes UNO R3
-开发板连接电脑时，点击计算机--属性--设备管理器，显示如下图。
+第一次Keyes UNO R3开发板连接电脑时，点击计算机--属性--设备管理器，显示如下图。
 
 ![](media/ef888e8d5fad0b30e4da671933f8842c.png)
 
@@ -65,13 +62,13 @@
 
 # 3.2、Arduino IDE的使用方法
 
-Keyes UNO R3
-开发板的USB驱动安装成功之后，我们可以在Windows设备管理器中找到相应的串口。
+Keyes UNO R3开发板的USB驱动安装成功之后，我们可以在Windows设备管理器中找到相应的串口。
 
 下面示范第一个程序的烧写，串口监视器中显示“Hello World！”。
 
 测试代码为：
 
+```
 int val;
 
 int ledpin=13;
@@ -80,40 +77,38 @@ void setup()
 
 {
 
-Serial.begin(9600);
+    Serial.begin(9600);
 
-pinMode(ledpin,OUTPUT);
+    pinMode(ledpin,OUTPUT);
 
 }
 
-void loop()
+void loop()	
 
 {
 
-val=Serial.read();
+    val=Serial.read();
 
-if(val=='R')
+    if(val=='R')
 
-{
+    {
 
-digitalWrite(ledpin,HIGH);
+        digitalWrite(ledpin,HIGH);
 
-delay(500);
+        delay(500);
 
-digitalWrite(ledpin,LOW);
+        digitalWrite(ledpin,LOW);
 
-delay(500);
+        delay(500);
 
-Serial.println("Hello World!");
+        Serial.println("Hello World!");
+
+    }
 
 }
+```
 
-}
-
-我们打开Arduino 的软件，编写一段程序让Keyes UNO R3
-开发板接受到我们发的指令就显示“Hello World！”字符串；我们再借用一下Keyes UNO R3 开发板上的 D13
-的指示灯，让Keyes UNO R3
-开发板接受到指令时指示灯闪烁一下，再显示“Hello World！”。
+我们打开Arduino 的软件，编写一段程序让Keyes UNO R3开发板接受到我们发的指令就显示“Hello World！”字符串；我们再借用一下Keyes UNO R3 开发板上的 D13的指示灯，让Keyes UNO R3开发板接受到指令时指示灯闪烁一下，再显示“Hello World！”。
 
 打开Arduino 的软件，设置板，如下。
 
@@ -127,8 +122,7 @@ Serial.println("Hello World!");
 
 ![](media/add2f4f32678fe555861ae1763488afd.png)
 
-上传成功，输入R，点击发送，Keyes UNO R3 开发板上的 D13
-的指示灯闪烁一次，串口监视器中显示 Hello World! 如下图
+上传成功，输入R，点击发送，Keyes UNO R3 开发板上的 D13的指示灯闪烁一次，串口监视器中显示 Hello World! 如下图
 
 ![](media/fa8f2de13c41710b9dbbfde0833eca74.png)
 
@@ -140,8 +134,7 @@ Serial.println("Hello World!");
 
 实验说明
 
-LED 闪烁实验是比较基础的实验之一，上一个“ Hello World！”实验里已经利用到了Arduino 自带的LED，这次我们利用其他I/O
-口和外接直插LED 灯来完成这个实验。
+LED 闪烁实验是比较基础的实验之一，上一个“ Hello World！”实验里已经利用到了Arduino 自带的LED，这次我们利用其他I/O口和外接直插LED 灯来完成这个实验。
 
 实验器材
 
@@ -163,6 +156,7 @@ LED*1
 
 测试代码
 
+```
 int led = 2; //定义数字口2
 
 void setup()
@@ -186,6 +180,7 @@ void loop()
   delay(1000);//延迟1秒
 
 }
+```
 
 测试结果
 
@@ -217,45 +212,45 @@ LED*1
 
 测试代码
 
+```
 int ledPin = 3; // 定义数字口3
 
 void setup()
 
 {
 
-pinMode(ledPin, OUTPUT);// 将ledPin设置为输出
-
+	pinMode(ledPin, OUTPUT);// 将ledPin设置为输出
+	
 }
 
 void loop()
 
 {
 
-for (int a=0; a\<=255;a++)// 设置使LED逐渐变亮
+    for (int a=0; a<=255;a++)// 设置使LED逐渐变亮
 
-{
+    {
 
-analogWrite(ledPin,a); //
-开启led,调节亮度，范围是0-255，在255时led最亮
+        analogWrite(ledPin,a); //开启led,调节亮度，范围是0-255，在255时led最亮
 
-delay(10); // 延迟0.01S
+        delay(10); // 延迟0.01S	
 
-}
+    }
 
-for (int a=255; a\>=0;a--) // 设置使LED逐渐变暗
+    for (int a=255; a>=0;a--) // 设置使LED逐渐变暗
 
-{
+    {
 
-analogWrite(ledPin,a); //
-开启led,调节亮度，范围是0-255，在255时led最亮
+        analogWrite(ledPin,a); //开启led,调节亮度，范围是0-255，在255时led最亮
 
-delay(10); // 延迟0.01秒
+        delay(10); // 延迟0.01秒	
 
-}
+    }
 
-delay(1000);// 延迟1秒
+    delay(1000);// 延迟1秒
 
 }
+```
 
 测试结果
 
@@ -287,6 +282,7 @@ LED\*5
 
 测试代码
 
+```
 int BASE = 2 ; //第一个 LED 接的 I/O 口
 
 int NUM = 5; //LED 的总数
@@ -295,13 +291,13 @@ void setup()
 
 {
 
-for (int i = BASE; i \< BASE + NUM; i ++)
+    for (int i = BASE; i< BASE + NUM; i ++)
 
-{
+    {
 
-pinMode(i, OUTPUT); //设定数字I/O口为输出
+    	pinMode(i, OUTPUT); //设定数字I/O口为输出
 
-}
+    }
 
 }
 
@@ -309,27 +305,28 @@ void loop()
 
 {
 
-for (int i = BASE; i \< BASE + NUM; i ++)
+    for (int i = BASE; i< BASE + NUM; i ++)
 
-{
+    {
 
-digitalWrite(i, HIGH); //设定数字I/O口输出为"高"，即逐渐开灯
+        digitalWrite(i, HIGH); //设定数字I/O口输出为"高"，即逐渐开灯
 
-delay(200); //延迟
+        delay(200); //延迟
+
+    }
+
+    for (int i = BASE; i< BASE + NUM; i ++)
+
+    {
+
+        digitalWrite(i, LOW); //设定数字I/O口输出为"低"，即逐渐关灯
+
+        delay(200); //延迟
+
+    }
 
 }
-
-for (int i = BASE; i \< BASE + NUM; i ++)
-
-{
-
-digitalWrite(i, LOW); //设定数字I/O口输出为"低"，即逐渐关灯
-
-delay(200); //延迟
-
-}
-
-}
+```
 
 测试结果
 
@@ -339,11 +336,7 @@ delay(200); //延迟
 
 实验说明
 
-I/O 口的意思即为INPUT 接口和OUTPUT
-接口，到目前为止我们设计的小灯实验都还只是应用到Arduino 的I/O
-口的输出功能，这个实验我们来尝试一下使用Arduino的I/O
-口的输入功能即为读取外接设备的输出值，我们用一个按键和一个LED
-小灯完成一个输入输出结合使用的实验，让大家能简单了解I/O 的作用。
+I/O 口的意思即为INPUT 接口和OUTPUT接口，到目前为止我们设计的小灯实验都还只是应用到Arduino 的I/O口的输出功能，这个实验我们来尝试一下使用Arduino的I/O口的输入功能即为读取外接设备的输出值，我们用一个按键和一个LED小灯完成一个输入输出结合使用的实验，让大家能简单了解I/O 的作用。
 
 实验器材
 
@@ -369,6 +362,7 @@ LED*1
 
 测试代码
 
+```
 int ledPin = 11; //定义数字口11
 
 int inputPin = 3; //定义数字口3
@@ -377,9 +371,9 @@ void setup()
 
 {
 
-pinMode(ledPin, OUTPUT); //将ledPin设置为输出
+    pinMode(ledPin, OUTPUT); //将ledPin设置为输出
 
-pinMode(inputPin, INPUT); //将inputPin设置为输入
+    pinMode(inputPin, INPUT); //将inputPin设置为输入
 
 }
 
@@ -387,27 +381,26 @@ void loop()
 
 {
 
-int val = digitalRead(inputPin);
+    int val = digitalRead(inputPin);//设置数字变量val，读取到数字口3的数值，并赋值给 val
 
-//设置数字变量val，读取到数字口3的数值，并赋值给 val
+    if (val == LOW) //当val为低电平时，LED变暗
 
-if (val == LOW) //当val为低电平时，LED变暗
+    {
 
-{
+    	digitalWrite(ledPin, LOW); // LED变暗
 
-digitalWrite(ledPin, LOW); // LED变暗
+    }
 
-}
+    else
 
-else
+    {
 
-{
+    	digitalWrite(ledPin, HIGH); // LED亮起
 
-digitalWrite(ledPin, HIGH); // LED亮起
-
-}
+    }
 
 }
+```
 
 测试结果
 
@@ -417,9 +410,7 @@ digitalWrite(ledPin, HIGH); // LED亮起
 
 实验说明
 
-完成上面的实验以后相信已经有很多朋友可以独立完成这个实验了，我们可以将上面的按键控制小灯的实验扩展成4个按键对应3
-个小灯，占用7个数字I/O
-接口。本实验中我们利用4个按键控制3个LED灯，从而达到抢答器的效果。
+完成上面的实验以后相信已经有很多朋友可以独立完成这个实验了，我们可以将上面的按键控制小灯的实验扩展成4个按键对应3个小灯，占用7个数字I/O接口。本实验中我们利用4个按键控制3个LED灯，从而达到抢答器的效果。
 
 实验器材
 
@@ -447,133 +438,82 @@ RGB灯*1
 
 测试代码
 
-int redled=9;
+```
+int redled = 9;                     // 红色LED控制引脚
+int yellowled = 10;                 // 黄色LED控制引脚
+int blueled = 11;                   // 蓝色LED控制引脚
 
-int yellowled=10;
+int redpin = 5;                     // 红色按钮输入引脚
+int yellowpin = 4;                  // 黄色按钮输入引脚
+int bluepin = 3;                    // 蓝色按钮输入引脚
+int restpin = 2;                    // 复位按钮输入引脚
 
-int blueled=11;
-
-int redpin=5;
-
-int yellowpin=4;
-
-int bluepin=3;
-
-int restpin=2;
-
-int red;
-
-int yellow;
-
-int blue;
+int red;                            // 存储红色按钮状态
+int yellow;                         // 存储黄色按钮状态
+int blue;                           // 存储蓝色按钮状态
 
 void setup()
-
 {
-
-pinMode(redled,OUTPUT);
-
-pinMode(yellowled,OUTPUT);
-
-pinMode( blueled,OUTPUT);
-
-pinMode(redpin,INPUT);
-
-pinMode(yellowpin,INPUT);
-
-pinMode(bluepin,INPUT);
-
+  pinMode(redled, OUTPUT);          // 设置红色LED为输出模式
+  pinMode(yellowled, OUTPUT);       // 设置黄色LED为输出模式
+  pinMode(blueled, OUTPUT);         // 设置蓝色LED为输出模式
+  
+  pinMode(redpin, INPUT);           // 设置红色按钮为输入模式
+  pinMode(yellowpin, INPUT);        // 设置黄色按钮为输入模式
+  pinMode(bluepin, INPUT);          // 设置蓝色按钮为输入模式
 }
 
 void loop()
-
 {
+  red = digitalRead(redpin);        // 读取红色按钮状态
+  yellow = digitalRead(yellowpin);  // 读取黄色按钮状态
+  blue = digitalRead(bluepin);      // 读取蓝色按钮状态
 
-red=digitalRead(redpin);
-
-yellow=digitalRead(yellowpin);
-
-blue=digitalRead(bluepin);
-
-if(red==LOW)RED_YES();
-
-if(yellow==LOW)YELLOW_YES();
-
-if(blue==LOW)BLUE_YES();
-
+  if(red == LOW) RED_YES();         // 红色按钮按下时执行红色模式
+  if(yellow == LOW) YELLOW_YES();   // 黄色按钮按下时执行黄色模式
+  if(blue == LOW) BLUE_YES();       // 蓝色按钮按下时执行蓝色模式
 }
 
 void RED_YES()
-
 {
-
-while(digitalRead(restpin)==1)
-
-{
-
-digitalWrite(redled, HIGH);
-
-digitalWrite(yellowled, LOW);
-
-digitalWrite(blueled, LOW);
-
-}
-
-clear_led();
-
+  while(digitalRead(restpin) == 1)  // 当复位按钮未按下时保持
+  {
+    digitalWrite(redled, HIGH);     // 点亮红色LED
+    digitalWrite(yellowled, LOW);   // 关闭黄色LED
+    digitalWrite(blueled, LOW);     // 关闭蓝色LED
+  }
+  clear_led();                      // 退出后清除所有LED状态
 }
 
 void YELLOW_YES()
-
 {
-
-while(digitalRead(restpin)==1)
-
-{
-
-digitalWrite(redled, LOW);
-
-digitalWrite(yellowled, HIGH);
-
-digitalWrite(blueled, LOW);
-
-}
-
-clear_led();
-
+  while(digitalRead(restpin) == 1)  // 当复位按钮未按下时保持
+  {
+    digitalWrite(redled, LOW);      // 关闭红色LED
+    digitalWrite(yellowled, HIGH);  // 点亮黄色LED
+    digitalWrite(blueled, LOW);     // 关闭蓝色LED
+  }
+  clear_led();                      // 退出后清除所有LED状态
 }
 
 void BLUE_YES()
-
 {
-
-while(digitalRead(restpin)==1)
-
-{
-
-digitalWrite(redled, LOW);
-
-digitalWrite(yellowled, LOW);
-
-digitalWrite(blueled, HIGH);
-
-}
-
-clear_led();
-
+  while(digitalRead(restpin) == 1)  // 当复位按钮未按下时保持
+  {
+    digitalWrite(redled, LOW);      // 关闭红色LED
+    digitalWrite(yellowled, LOW);   // 关闭黄色LED
+    digitalWrite(blueled, HIGH);    // 点亮蓝色LED
+  }
+  clear_led();                      // 退出后清除所有LED状态
 }
 
 void clear_led()
-
 {
-
-digitalWrite(redled, LOW);
-
-digitalWrite(yellowled, LOW);
-
-digitalWrite(blueled, LOW);
-
+  digitalWrite(redled, LOW);        // 关闭红色LED
+  digitalWrite(yellowled, LOW);     // 关闭黄色LED
+  digitalWrite(blueled, LOW);       // 关闭蓝色LED
 }
+```
 
 测试结果
 
@@ -607,15 +547,16 @@ LED*1
 
 测试代码
 
+```
 int ledpin=11;//定义数字接口11（PWM 输出）
 
 void setup()
 
 {
 
-pinMode(ledpin,OUTPUT);//定义数字接口11 为输出
+    pinMode(ledpin,OUTPUT);//定义数字接口11 为输出
 
-Serial.begin(9600);//设置波特率为9600
+    Serial.begin(9600);//设置波特率为9600
 
 }
 
@@ -623,17 +564,18 @@ void loop()
 
 {
 
-int val=analogRead(0);//读取模拟口A0口的值
+    int val=analogRead(0);//读取模拟口A0口的值
 
-val = map(val, 0, 1023, 0, 255);//从0-1023映射到0-255
+    val = map(val, 0, 1023, 0, 255);//从0-1023映射到0-255
 
-Serial.println(val);//显示val 变量
+    Serial.println(val);//显示val 变量
 
-analogWrite(ledpin,val);// 打开LED 并设置亮度
+    analogWrite(ledpin,val);// 打开LED 并设置亮度
 
-delay(100);//延时0.1 秒
+    delay(100);//延时0.1 秒
 
 }
+```
 
 测试结果
 
@@ -663,6 +605,7 @@ USB线*1
 
 测试代码
 
+```
 int buzzer = 2; //定义数字口2
 
 void setup()
@@ -686,6 +629,7 @@ void loop()
   delay(1000);//延迟1S
 
 }
+```
 
 测试结果
 
@@ -717,13 +661,14 @@ USB线*1
 
 code 1:
 
+```
 int buzzer=3; //定义数字口3
 
 void setup()
 
 {
 
-pinMode(buzzer,OUTPUT);//将buzzer设置为输出
+	pinMode(buzzer,OUTPUT);//将buzzer设置为输出
 
 }
 
@@ -731,178 +676,180 @@ void loop()
 
 {
 
-unsigned char i,j;//定义变量i，j
+    unsigned char i,j;//定义变量i，j
 
-while(1)
+    while(1)
 
-{
+    {
 
-for(i=0;i\<80;i++)// 输出一个频率的声音
+        for(i=0;i<80;i++)// 输出一个频率的声音
 
-{
+        {
 
-digitalWrite(buzzer,HIGH);
+            digitalWrite(buzzer,HIGH);
 
-delay(1);//延迟1ms
+            delay(1);//延迟1ms
 
-digitalWrite(buzzer,LOW);
+            digitalWrite(buzzer,LOW);
 
-delay(1);//延迟1ms
+            delay(1);//延迟1ms
+
+        }
+
+        for(i=0;i<100;i++)// 输出另一个频率的声音
+
+        {
+
+            digitalWrite(buzzer,HIGH);
+
+            delay(2);//延迟2ms
+
+            digitalWrite(buzzer,LOW);
+
+            delay(2);//延迟2ms
+
+        }
+
+    }
 
 }
-
-for(i=0;i\<100;i++)// 输出另一个频率的声音
-
-{
-
-digitalWrite(buzzer,HIGH);
-
-delay(2);//延迟2ms
-
-digitalWrite(buzzer,LOW);
-
-delay(2);//延迟2ms
-
-}
-
-}
-
-}
+```
 
 code 2:
 
-\#define D0 -1
+```
+#define D0 -1
 
-\#define D1 262
+#define D1 262
 
-\#define D2 293
+#define D2 293
 
-\#define D3 329
+#define D3 329
 
-\#define D4 349
+#define D4 349
 
-\#define D5 392
+#define D5 392
 
-\#define D6 440
+#define D6 440
 
-\#define D7 494
+#define D7 494
 
-\#define M1 523
+#define M1 523
 
-\#define M2 586
+#define M2 586
 
-\#define M3 658
+#define M3 658
 
-\#define M4 697
+#define M4 697
 
-\#define M5 783
+#define M5 783
 
-\#define M6 879
+#define M6 879
 
-\#define M7 987
+#define M7 987
 
-\#define H1 1045
+#define H1 1045
 
-\#define H2 1171
+#define H2 1171
 
-\#define H3 1316
+#define H3 1316
 
-\#define H4 1393
+#define H4 1393
 
-\#define H5 1563
+#define H5 1563
 
-\#define H6 1755
+#define H6 1755
 
-\#define H7 1971
+#define H7 1971
 
 //列出全部D调的频率
 
-\#define WHOLE 1
+#define WHOLE 1
 
-\#define HALF 0.5
+#define HALF 0.5
 
-\#define QUARTER 0.25
+#define QUARTER 0.25
 
-\#define EIGHTH 0.25
+#define EIGHTH 0.25
 
-\#define SIXTEENTH 0.625
+#define SIXTEENTH 0.625
 
 //列出所有节拍
 
-int tune\[\]= //根据简谱列出各频率
+int tune[]= //根据简谱列出各频率
 
 {
 
-M3,M3,M4,M5,
+    M3,M3,M4,M5,
 
-M5,M4,M3,M2,
+    M5,M4,M3,M2,
 
-M1,M1,M2,M3,
+    M1,M1,M2,M3,
 
-M3,M2,M2,
+    M3,M2,M2,
 
-M3,M3,M4,M5,
+    M3,M3,M4,M5,
 
-M5,M4,M3,M2,
+    M5,M4,M3,M2,
 
-M1,M1,M2,M3,
+    M1,M1,M2,M3,
 
-M2,M1,M1,
+    M2,M1,M1,
 
-M2,M2,M3,M1,
+    M2,M2,M3,M1,
 
-M2,M3,M4,M3,M1,
+    M2,M3,M4,M3,M1,
 
-M2,M3,M4,M3,M2,
+    M2,M3,M4,M3,M2,
 
-M1,M2,D5,D0,
+    M1,M2,D5,D0,
 
-M3,M3,M4,M5,
+    M3,M3,M4,M5,
 
-M5,M4,M3,M4,M2,
+    M5,M4,M3,M4,M2,
 
-M1,M1,M2,M3,
+    M1,M1,M2,M3,
 
-M2,M1,M1
+    M2,M1,M1
 
 };
 
-float durt\[\]= //根据简谱列出各节拍
+float durt[]= //根据简谱列出各节拍
 
 {
 
-1,1,1,1,
+    1,1,1,1,
 
-1,1,1,1,
+    1,1,1,1,
 
-1,1,1,1,
+    1,1,1,1,
 
-1+0.5,0.5,1+1,
+    1+0.5,0.5,1+1,
 
-1,1,1,1,
+    1,1,1,1,
 
-1,1,1,1,
+    1,1,1,1,
 
-1,1,1,1,
+    1,1,1,1,
 
-1+0.5,0.5,1+1,
+    1+0.5,0.5,1+1,
 
-1,1,1,1,
+    1,1,1,1,
 
-1,0.5,0.5,1,1,
+    1,0.5,0.5,1,1,
 
-1,0.5,0.5,1,1,
+    1,0.5,0.5,1,1,
 
-1,1,1,1,
+    1,1,1,1,
 
-1,1,1,1,
+    1,1,1,1,
 
-1,1,1,0.5,0.5,
+    1,1,1,0.5,0.5,
 
-1,1,1,1,
+    1,1,1,1,
 
-1+0.5,0.5,1+1,
-
+    1+0.5,0.5,1+1,
+    
 };
 
 int length;
@@ -913,9 +860,9 @@ void setup()
 
 {
 
-pinMode(tonepin,OUTPUT);
+    pinMode(tonepin,OUTPUT);
 
-length=sizeof(tune)/sizeof(tune\[0\]); //计算长度
+    length=sizeof(tune)/sizeof(tune[0]); //计算长度
 
 }
 
@@ -923,22 +870,22 @@ void loop()
 
 {
 
-for(int x=0;x\<length;x++)
+    for(int x=0;x<length;x++)
 
-{
+    {
 
-tone(tonepin,tune\[x\]);
+        tone(tonepin,tune[x]);
 
-delay(500\*durt\[x\]);
-//这里用来根据节拍调节延时，500这个指数可以自己调整，在该音乐中，我发现用500比较合适。
+        delay(500*durt[x]);//这里用来根据节拍调节延时，500这个指数可以自己调整，在该音乐中，我发现用500比较合适。
 
-noTone(tonepin);
+        noTone(tonepin);
+
+    }
+
+    delay(2000);
 
 }
-
-delay(2000);
-
-}
+```
 
 测试结果
 
@@ -980,291 +927,264 @@ USB线*1
 
 四位接法
 
-/\*
+```
+/*
+  LiquidCrystal Library - Hello World
+  演示16x2 LCD显示屏的使用
+  兼容Hitachi HD44780驱动器的LCD均可使用
+  电路连接：
+  * LCD RS引脚 → 数字引脚2
+  * LCD Enable引脚 → 数字引脚3
+  * LCD D4引脚 → 数字引脚4
+  * LCD D5引脚 → 数字引脚5
+  * LCD D6引脚 → 数字引脚6
+  * LCD D7引脚 → 数字引脚7
+  * LCD R/W引脚 → 接地
+  * LCD VSS引脚 → 接地
+  * LCD VCC引脚 → 5V
+  * 10K电位器：
+    - 两端接5V和地
+    - 中间接LCD VO引脚
+*/
 
-LiquidCrystal Library - Hello World
+#include <LiquidCrystal.h>          // 包含LCD库
 
-Demonstrates the use a 16x2 LCD display. The LiquidCrystal
+// 初始化LCD对象，指定接口引脚
+LiquidCrystal lcd(2, 3, 4, 5, 6, 7);  // (RS, E, D4, D5, D6, D7)
 
-library works with all LCD displays that are compatible with the
-
-Hitachi HD44780 driver. There are many of them out there, and you
-
-can usually tell them by the 16-pin interface.
-
-This sketch prints "Hello World!" to the LCD
-
-and shows the time.
-
-The circuit:
-
-\* LCD RS pin to digital pin 2
-
-\* LCD Enable pin to digital pin3
-
-\* LCD D4 pin to digital pin 4
-
-\* LCD D5 pin to digital pin 5
-
-\* LCD D6 pin to digital pin 6
-
-\* LCD D7 pin to digital pin 7
-
-\* LCD R/W pin to ground
-
-\* LCD VSS pin to ground
-
-\* LCD VCC pin to 5V
-
-\* 10K resistor:
-
-\* ends to +5V and ground
-
-\* wiper to LCD VO pin
-
-\*/
-
-// include the library code:
-
-\#include \<LiquidCrystal.h\>
-
-// initialize the library with the numbers of the interface pins
-
-LiquidCrystal lcd(2, 3, 4, 5, 6, 7);
-
-void setup() {
-
-// set up the LCD's number of columns and rows:
-
-lcd.begin(16, 2);
-
-// Print a message to the LCD.
-
-lcd.setCursor(2,0);
-
-lcd.print("Hello, world!");
-
-lcd.setCursor(2,1);
-
-lcd.print("Hello, keyes!");
-
+void setup() 
+{
+  // 设置LCD显示列数和行数（16列x2行）
+  lcd.begin(16, 2);
+  
+  // 在第一行显示信息（从第3列开始）
+  lcd.setCursor(2, 0);             // 设置光标位置(列,行)
+  lcd.print("Hello, world!");      // 打印文本
+  
+  // 在第二行显示信息（从第3列开始）
+  lcd.setCursor(2, 1);             // 设置光标位置(列,行) 
+  lcd.print("Hello, keyes!");      // 打印文本
 }
 
-void loop() {
-
+void loop() 
+{
+  // 主循环无需重复操作
 }
+```
 
-注意：在上传程序前，要把LiquidCrystal文件夹放到 编译器安装目录下的
-
-\Arduino\libraries里。不然编译不过。
-
-例如我的：C:\Program Files\Arduino\libraries
+注意：在上传程序前，要把LiquidCrystal文件夹放到 编译器安装目录下的\Arduino\libraries里。不然编译不过。例如我的：C:\Program Files\Arduino\libraries
 
 八位接法
 
+```
 int DI = 12;
 
 int RW = 11;
 
-int DB\[\] = {3, 4,5, 6,7 ,8, 9, 10};//使用数组来定义总线需要的管脚
+int DB[] = {3, 4,5, 6,7 ,8, 9, 10};//使用数组来定义总线需要的管脚
 
 int Enable = 2;
 
-void LcdCommandWrite(int value) {
-
-// 定义所有引脚
-
-int i = 0;
-
-for (i=DB\[0\]; i \<= DI; i++) //总线赋值
-
+void LcdCommandWrite(int value)
 {
 
-digitalWrite(i,value &
-01);//因为1602液晶信号识别是D7-D0(不是D0-D7)，这里是用来反转信号。
+    // 定义所有引脚
 
-value \>\>= 1;
+    int i = 0;
 
-}
+    for (i=DB[0]; i <= DI; i++) //总线赋值
 
-digitalWrite(Enable,LOW);
+    {
 
-delayMicroseconds(1);
+        digitalWrite(i,value &01);//因为1602液晶信号识别是D7-D0(不是D0-D7)，这里是用来反转信号。
 
-digitalWrite(Enable,HIGH);
+        value >>= 1;
 
-delayMicroseconds(1); // 延时1ms
+    }
 
-digitalWrite(Enable,LOW);
+    digitalWrite(Enable,LOW);
 
-delayMicroseconds(1); // 延时1ms
+    delayMicroseconds(1);
 
-}
+    digitalWrite(Enable,HIGH);
 
-void LcdDataWrite(int value) {
+    delayMicroseconds(1); // 延时1ms
 
-// 定义所有引脚
+    digitalWrite(Enable,LOW);
 
-int i = 0;
-
-digitalWrite(DI, HIGH);
-
-digitalWrite(RW, LOW);
-
-for (i=DB\[0\]; i \<= DB\[7\]; i++) {
-
-digitalWrite(i,value & 01);
-
-value \>\>= 1;
+    delayMicroseconds(1); // 延时1ms
 
 }
 
-digitalWrite(Enable,LOW);
+void LcdDataWrite(int value) 
+{
 
-delayMicroseconds(1);
+    // 定义所有引脚
 
-digitalWrite(Enable,HIGH);
+    int i = 0;
 
-delayMicroseconds(1);
+    digitalWrite(DI, HIGH);
 
-digitalWrite(Enable,LOW);
+    digitalWrite(RW, LOW);
 
-delayMicroseconds(1); // 延时1ms
+    for (i=DB[0]; i <= DB[7]; i++) 
+    {
 
-}
+        digitalWrite(i,value & 01);
 
-void setup (void) {
+        value >>= 1;
 
-int i = 0;
+    }
 
-for (i=Enable; i \<= DI; i++) {
+    digitalWrite(Enable,LOW);
 
-pinMode(i,OUTPUT);
+    delayMicroseconds(1);
 
-}
+    digitalWrite(Enable,HIGH);
 
-delay(100);
+    delayMicroseconds(1);
 
-// 短暂的停顿后初始化LCD
+    digitalWrite(Enable,LOW);
 
-// 用于LCD控制需要
-
-LcdCommandWrite(0x38); // 设置为8-bit接口，2行显示，5x7文字大小
-
-delay(64);
-
-LcdCommandWrite(0x38); // 设置为8-bit接口，2行显示，5x7文字大小
-
-delay(50);
-
-LcdCommandWrite(0x38); // 设置为8-bit接口，2行显示，5x7文字大小
-
-delay(20);
-
-LcdCommandWrite(0x06); // 输入方式设定
-
-// 自动增量，没有显示移位
-
-delay(20);
-
-LcdCommandWrite(0x0E); // 显示设置
-
-// 开启显示屏，光标显示，无闪烁
-
-delay(20);
-
-LcdCommandWrite(0x01); // 屏幕清空，光标位置归零
-
-delay(100);
-
-LcdCommandWrite(0x80); // 显示设置
-
-// 开启显示屏，光标显示，无闪烁
-
-delay(20);
+    delayMicroseconds(1); // 延时1ms
 
 }
 
-void loop (void) {
+void setup (void) 
+{
 
-LcdCommandWrite(0x01); // 屏幕清空，光标位置归零
+    int i = 0;
 
-delay(10);
+    for (i=Enable; i<= DI; i++) 
+    {
+    
+    	pinMode(i,OUTPUT);
 
-LcdCommandWrite(0x80+2);
+    }
 
-delay(10);
+    delay(100);
 
-// 写入欢迎信息
+    // 短暂的停顿后初始化LCD
 
-LcdDataWrite('H');
+    // 用于LCD控制需要
 
-LcdDataWrite('e');
+    LcdCommandWrite(0x38); // 设置为8-bit接口，2行显示，5x7文字大小
 
-LcdDataWrite('l');
+    delay(64);
 
-LcdDataWrite('l');
+    LcdCommandWrite(0x38); // 设置为8-bit接口，2行显示，5x7文字大小
 
-LcdDataWrite('o');
+    delay(50);
 
-LcdDataWrite(',');
+    LcdCommandWrite(0x38); // 设置为8-bit接口，2行显示，5x7文字大小
 
-LcdDataWrite(' ');
+    delay(20);
 
-LcdDataWrite('w');
+    LcdCommandWrite(0x06); // 输入方式设定
 
-LcdDataWrite('o');
+    // 自动增量，没有显示移位
 
-LcdDataWrite('r');
+    delay(20);
 
-LcdDataWrite('l');
+    LcdCommandWrite(0x0E); // 显示设置
 
-LcdDataWrite('d');
+    // 开启显示屏，光标显示，无闪烁
 
-LcdDataWrite('!');
+    delay(20);
 
-delay(10);
+    LcdCommandWrite(0x01); // 屏幕清空，光标位置归零
 
-LcdCommandWrite(0xc0+2); // 定义光标位置为第二行第二个位置
+    delay(100);
 
-delay(10);
+    LcdCommandWrite(0x80); // 显示设置
 
-LcdDataWrite('H');
+    // 开启显示屏，光标显示，无闪烁
 
-LcdDataWrite('e');
-
-LcdDataWrite('l');
-
-LcdDataWrite('l');
-
-LcdDataWrite('o');
-
-LcdDataWrite(',');
-
-LcdDataWrite(' ');
-
-LcdDataWrite('k');
-
-LcdDataWrite('e');
-
-LcdDataWrite('y');
-
-LcdDataWrite('e');
-
-LcdDataWrite('s');
-
-LcdDataWrite('!');
-
-LcdDataWrite(' ');
-
-delay(5000);
+    delay(20);
 
 }
+
+void loop (void) 
+{
+
+    LcdCommandWrite(0x01); // 屏幕清空，光标位置归零
+
+    delay(10);
+
+    LcdCommandWrite(0x80+2);
+
+    delay(10);
+
+    // 写入欢迎信息
+
+    LcdDataWrite('H');
+
+    LcdDataWrite('e');
+
+    LcdDataWrite('l');
+
+    LcdDataWrite('l');
+
+    LcdDataWrite('o');
+
+    LcdDataWrite(',');
+
+    LcdDataWrite(' ');
+
+    LcdDataWrite('w');
+
+    LcdDataWrite('o');
+
+    LcdDataWrite('r');
+
+    LcdDataWrite('l');
+
+    LcdDataWrite('d');
+
+    LcdDataWrite('!');
+
+    delay(10);
+
+    LcdCommandWrite(0xc0+2); // 定义光标位置为第二行第二个位置
+
+    delay(10);
+
+    LcdDataWrite('H');
+
+    LcdDataWrite('e');
+
+    LcdDataWrite('l');
+
+    LcdDataWrite('l');
+
+    LcdDataWrite('o');
+
+    LcdDataWrite(',');
+
+    LcdDataWrite(' ');
+
+    LcdDataWrite('k');
+
+    LcdDataWrite('e');
+
+    LcdDataWrite('y');
+
+    LcdDataWrite('e');
+
+    LcdDataWrite('s');
+
+    LcdDataWrite('!');
+
+    LcdDataWrite(' ');
+
+    delay(5000);
+
+}
+```
 
 测试结果
 
-无论是四位接法还是八位接法，接好线，烧录程序上电后，通过旋转电位器调节背光，即可在1602 LCD上看到设置的显示字符。四位接法和八位接法显示一样，第一行显示
-"Hello, world!"字符，第二行显示"Hello, keyes!"字符。
+无论是四位接法还是八位接法，接好线，烧录程序上电后，通过旋转电位器调节背光，即可在1602 LCD上看到设置的显示字符。四位接法和八位接法显示一样，第一行显示"Hello, world!"字符，第二行显示"Hello, keyes!"字符。
 
 
 
