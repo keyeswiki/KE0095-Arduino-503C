@@ -5,69 +5,51 @@
 
 .. container:: table-wrapper
 
-   +------+------------+--------------------+------+--------------------+
-   | 编码 | 名称       | 描述               | 数量 | 图片               |
-   +======+============+====================+======+====================+
-   | 1    | LED        | F5-红发红-短       | 5    | |image63|          |
-   +------+------------+--------------------+------+--------------------+
-   | 2    | LED        | F5-黄发黄-短       | 5    | |image64|          |
-   +------+------------+--------------------+------+--------------------+
-   | 3    | LED        | F5-蓝发蓝-短       | 5    | |image65|          |
-   +------+------------+--------------------+------+--------------------+
-   | 4    | 电阻       | 碳膜色环 1/4W 1%   | 30   | |image66|\ ×30     |
-   |      |            | 100R 编带          |      |                    |
-   +------+------------+--------------------+------+--------------------+
-   | 5    | 电阻       | 碳膜色环 1/4W 5%   | 30   | |image67|\ ×30     |
-   |      |            | 1K 编带            |      |                    |
-   +------+------------+--------------------+------+--------------------+
-   | 6    | 电阻       | 碳膜色环 1/4W 5%   | 30   | |image68|\ ×30     |
-   |      |            | 4.7K 编带          |      |                    |
-   +------+------------+--------------------+------+--------------------+
-   | 7    | 电阻       | 碳膜色环 1/4W 5%   | 30   | |image69|\ ×30     |
-   |      |            | 10K 编带           |      |                    |
-   +------+------------+--------------------+------+--------------------+
-   | 8    | 电阻       | 碳膜色环 1/4W 5%   | 30   | |image70|\ ×30     |
-   |      |            | 100K 编带          |      |                    |
-   +------+------------+--------------------+------+--------------------+
-   | 9    | 电阻       | 碳膜色环 1/4W 1%   | 30   | |image71|\ ×30     |
-   |      |            | 47K 编带           |      |                    |
-   +------+------------+--------------------+------+--------------------+
-   | 10   | 电阻       | 碳膜色环 1/4W 5%   | 30   | |image72|\ ×30     |
-   |      |            | 1M 编带            |      |                    |
-   +------+------------+--------------------+------+--------------------+
-   | 11   | 可调电位器 | 3386MU 103         | 2    ||image73|\ |image74| |
-   |      |            | 三针直排           |      |                    |
-   +------+------------+--------------------+------+--------------------+
-   | 12   | 按键帽     | A24 红帽           | 2    ||image75|\ |image76||
-   |      |            | 12\ *12*\ 7.3 圆   |      |\ |image77|\ |image78||
-   +------+------------+--------------------+------+--------------------+
-   | 13   | 按键帽     | A24 蓝帽           | 2    | |image79|         |
-   |      |            | 12\ *12*\ 7.3 圆   |      | \ |image80|\     |
-   |      |            |                    |      ||image81|\ |image82| |
-   +------+------------+--------------------+------+--------------------+
-   | 14   | 轻触按键   | 12\ *12*\ 7.3MM    | 4    | |image83|         |
-   |      |            | 插件               |      | \ |image84|\      |
-   |      |            |                    |      ||image85|\ |image86||
-   +------+------------+--------------------+------+--------------------+
-   | 15   | 蜂鸣器     | 有源 12*9.5MM 5V   | 1    | |image87|          |
-   |      |            | 普通分体 2300Hz    |      |                    |
-   +------+------------+--------------------+------+--------------------+
-   | 16   | 蜂鸣器     | 无源 12*8.5MM 5V   | 1    | |image88|          |
-   |      |            | 普通分体 2K        |      |                    |
-   +------+------------+--------------------+------+--------------------+
-   | 17   | LCD        | 1602 COB 5V 蓝屏   | 1    | |image89|          |
-   |      |            | 一个电阻           |      |                    |
-   +------+------------+--------------------+------+--------------------+
-   | 18   | 排针       | 1*40直针 黑色 2.54 | 1    | |image90|          |
-   +------+------------+--------------------+------+--------------------+
-   | 19   | 面包板     | ZY-60 400孔白色    | 1    | |image91|          |
-   |      |            | 纸卡包装           |      |                    |
-   +------+------------+--------------------+------+--------------------+
-   | 20   | 面包线     | 面包板连接线30根   | 1    | |image92|          |
-   +------+------------+--------------------+------+--------------------+
-   | 21   | 元件盒     | 绿色 2# 绿         | 1    | |image93|          |
-   |      |            | 75×31.5×21.5 16克  |      |                    |
-   +------+------------+--------------------+------+--------------------+
+   +------+------------+----------------------------------+------+----------------------+
+   | 编码 | 名称       | 描述                             | 数量 | 图片                 |
+   +======+============+==================================+======+======================+
+   | 1    | LED        | F5-红发红-短                     | 5    | |image26|            |
+   +------+------------+----------------------------------+------+----------------------+
+   | 2    | LED        | F5-黄发黄-短                     | 5    | |image27|            |
+   +------+------------+----------------------------------+------+----------------------+
+   | 3    | LED        | F5-蓝发蓝-短                     | 5    | |image28|            |
+   +------+------------+----------------------------------+------+----------------------+
+   | 4    | 电阻       | 碳膜色环 1/4W 1% 100R 编带       | 30   | |image29|\ ×30       |
+   +------+------------+----------------------------------+------+----------------------+
+   | 5    | 电阻       | 碳膜色环 1/4W 5% 1K 编带         | 30   | |image30|\ ×30       |
+   +------+------------+----------------------------------+------+----------------------+
+   | 6    | 电阻       | 碳膜色环 1/4W 5% 4.7K 编带       | 30   | |image31|\ ×30       |
+   +------+------------+----------------------------------+------+----------------------+
+   | 7    | 电阻       | 碳膜色环 1/4W 5% 10K 编带        | 30   | |image32|\ ×30       |
+   +------+------------+----------------------------------+------+----------------------+
+   | 8    | 电阻       | 碳膜色环 1/4W 5% 100K 编带       | 30   | |image33|\ ×30       |
+   +------+------------+----------------------------------+------+----------------------+
+   | 9    | 电阻       | 碳膜色环 1/4W 1% 47K 编带        | 30   | |image34|\ ×30       |
+   +------+------------+----------------------------------+------+----------------------+
+   | 10   | 电阻       | 碳膜色环 1/4W 5% 1M 编带         | 30   | |image35|\ ×30       |
+   +------+------------+----------------------------------+------+----------------------+
+   | 11   | 可调电位器 | 3386MU 103 三针直排              | 2    | |image36|\ |image37| |
+   +------+------------+----------------------------------+------+----------------------+
+   | 12   | 按键帽     | A24 红帽 12\ *12*\ 7.3 圆        | 2    | |image38|\ |image39| |
+   +------+------------+----------------------------------+------+----------------------+
+   | 13   | 按键帽     | A24 蓝帽 12\ *12*\ 7.3 圆        | 2    | |image40|\ |image41| |
+   +------+------------+----------------------------------+------+----------------------+
+   | 14   | 轻触按键   | 12\ *12*\ 7.3MM 插件             | 4    | |image42|\ |image43| |
+   +------+------------+----------------------------------+------+----------------------+
+   | 15   | 蜂鸣器     | 有源 12*9.5MM 5V 普通分体 2300Hz | 1    | |image44|            |
+   +------+------------+----------------------------------+------+----------------------+
+   | 16   | 蜂鸣器     | 无源 12*8.5MM 5V 普通分体 2K     | 1    | |image45|            |
+   +------+------------+----------------------------------+------+----------------------+
+   | 17   | LCD        | 1602 COB 5V 蓝屏 一个电阻        | 1    | |image46|            |
+   +------+------------+----------------------------------+------+----------------------+
+   | 18   | 排针       | 1*40直针 黑色 2.54               | 1    | |image47|            |
+   +------+------------+----------------------------------+------+----------------------+
+   | 19   | 面包板     | ZY-60 400孔白色 纸卡包装         | 1    | |image48|            |
+   +------+------------+----------------------------------+------+----------------------+
+   | 20   | 面包线     | 面包板连接线30根                 | 1    | |image49|            |
+   +------+------------+----------------------------------+------+----------------------+
+   | 21   | 元件盒     | 绿色 2# 绿 75×31.5×21.5 16克     | 1    | |image50|            |
+   +------+------------+----------------------------------+------+----------------------+
 
 .. |image1| image:: media/557767e2afcda28f66f20f124e174c44.png
 .. |image2| image:: media/bb42585eb8c072b22afe5478fe076f27.png
@@ -86,79 +68,36 @@
 .. |image15| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
 .. |image16| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
 .. |image17| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image18| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image19| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image20| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image21| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image22| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image23| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image24| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image25| image:: media/5a749ec6435e3982bf4dbdc5eaf7b51e.jpg
-.. |image26| image:: media/0c80123578173c033dcc8f1b73b1a58b.jpg
-.. |image27| image:: media/dfd939416f3d37aab7cdfb9dd20d39a1.png
-.. |image28| image:: media/9a4ce90626c96645a87b3c7b1a82a8a6.png
-.. |image29| image:: media/5b59c759d98d3d24894a09e0ac878717.png
-.. |image30| image:: media/aa5f4d54d5b8ec553906f3890bc2df0c.png
-.. |image31| image:: media/14e3865259225cc6ece92bd01c0518ba.png
-.. |image32| image:: media/557767e2afcda28f66f20f124e174c44.png
-.. |image33| image:: media/bb42585eb8c072b22afe5478fe076f27.png
-.. |image34| image:: media/797f69509d22d4250f7bb62f885813bf.png
+.. |image18| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
+.. |image19| image:: media/5a749ec6435e3982bf4dbdc5eaf7b51e.jpg
+.. |image20| image:: media/0c80123578173c033dcc8f1b73b1a58b.jpg
+.. |image21| image:: media/dfd939416f3d37aab7cdfb9dd20d39a1.png
+.. |image22| image:: media/9a4ce90626c96645a87b3c7b1a82a8a6.png
+.. |image23| image:: media/5b59c759d98d3d24894a09e0ac878717.png
+.. |image24| image:: media/aa5f4d54d5b8ec553906f3890bc2df0c.png
+.. |image25| image:: media/14e3865259225cc6ece92bd01c0518ba.png
+.. |image26| image:: media/557767e2afcda28f66f20f124e174c44.png
+.. |image27| image:: media/bb42585eb8c072b22afe5478fe076f27.png
+.. |image28| image:: media/797f69509d22d4250f7bb62f885813bf.png
+.. |image29| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
+.. |image30| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
+.. |image31| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
+.. |image32| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
+.. |image33| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
+.. |image34| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
 .. |image35| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
-.. |image36| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
-.. |image37| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
-.. |image38| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
-.. |image39| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
-.. |image40| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
-.. |image41| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
-.. |image42| image:: media/6d6025bc96667b6f44070355f2041f13.jpg
-.. |image43| image:: media/6d6025bc96667b6f44070355f2041f13.jpg
-.. |image44| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image45| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image46| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image47| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image48| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image49| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image50| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image51| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image52| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image53| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image54| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image55| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image56| image:: media/5a749ec6435e3982bf4dbdc5eaf7b51e.jpg
-.. |image57| image:: media/0c80123578173c033dcc8f1b73b1a58b.jpg
-.. |image58| image:: media/dfd939416f3d37aab7cdfb9dd20d39a1.png
-.. |image59| image:: media/9a4ce90626c96645a87b3c7b1a82a8a6.png
-.. |image60| image:: media/5b59c759d98d3d24894a09e0ac878717.png
-.. |image61| image:: media/aa5f4d54d5b8ec553906f3890bc2df0c.png
-.. |image62| image:: media/14e3865259225cc6ece92bd01c0518ba.png
-.. |image63| image:: media/557767e2afcda28f66f20f124e174c44.png
-.. |image64| image:: media/bb42585eb8c072b22afe5478fe076f27.png
-.. |image65| image:: media/797f69509d22d4250f7bb62f885813bf.png
-.. |image66| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
-.. |image67| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
-.. |image68| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
-.. |image69| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
-.. |image70| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
-.. |image71| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
-.. |image72| image:: media/f6a8649da4e79abb2f1d15479f073bb5.jpg
-.. |image73| image:: media/6d6025bc96667b6f44070355f2041f13.jpg
-.. |image74| image:: media/6d6025bc96667b6f44070355f2041f13.jpg
-.. |image75| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image76| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image77| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image78| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image79| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image80| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image81| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image82| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image83| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image84| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
-.. |image85| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image86| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
-.. |image87| image:: media/5a749ec6435e3982bf4dbdc5eaf7b51e.jpg
-.. |image88| image:: media/0c80123578173c033dcc8f1b73b1a58b.jpg
-.. |image89| image:: media/dfd939416f3d37aab7cdfb9dd20d39a1.png
-.. |image90| image:: media/9a4ce90626c96645a87b3c7b1a82a8a6.png
-.. |image91| image:: media/5b59c759d98d3d24894a09e0ac878717.png
-.. |image92| image:: media/aa5f4d54d5b8ec553906f3890bc2df0c.png
-.. |image93| image:: media/14e3865259225cc6ece92bd01c0518ba.png
+.. |image36| image:: media/6d6025bc96667b6f44070355f2041f13.jpg
+.. |image37| image:: media/6d6025bc96667b6f44070355f2041f13.jpg
+.. |image38| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
+.. |image39| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
+.. |image40| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
+.. |image41| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
+.. |image42| image:: media/f4522a2209f122d0b094cb5e4755b211.jpg
+.. |image43| image:: media/4be4ce2e80aa9f06e7f02d37c7c5a42a.jpg
+.. |image44| image:: media/5a749ec6435e3982bf4dbdc5eaf7b51e.jpg
+.. |image45| image:: media/0c80123578173c033dcc8f1b73b1a58b.jpg
+.. |image46| image:: media/dfd939416f3d37aab7cdfb9dd20d39a1.png
+.. |image47| image:: media/9a4ce90626c96645a87b3c7b1a82a8a6.png
+.. |image48| image:: media/5b59c759d98d3d24894a09e0ac878717.png
+.. |image49| image:: media/aa5f4d54d5b8ec553906f3890bc2df0c.png
+.. |image50| image:: media/14e3865259225cc6ece92bd01c0518ba.png
